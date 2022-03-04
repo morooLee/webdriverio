@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": [
+      "node",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "@wdio/devtools-service", // 여기에 추가해 줍니다.
+      "expect-webdriverio"
+    ],
+    "target": "ES2021",
+    "baseUrl": ".",
+    "paths": {
+      "@test/*": ["test/*"],
+      "@types/*": ["types/*"]
+    },
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": false
+  },
+  "include": ["./types/*.d.ts", "./test/**/*.ts"],
+  "exclude": ["./node_modules"]
+}
